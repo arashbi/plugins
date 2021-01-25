@@ -35,6 +35,8 @@ class ExifDataCopier {
               "GPSLongitudeRef",
               "Make",
               "Model",
+              "DateTimeOriginal",
+              "DateTime",
               "Orientation");
       for (String attribute : attributes) {
         setIfNotNull(oldExif, newExif, attribute);
