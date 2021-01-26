@@ -331,7 +331,7 @@ public class ImagePickerDelegate
     launchPickImageFromGalleryIntent();
   }
 
-  private void launchPickImageFromGalleryIntent() {
+  private void  launchPickImageFromGalleryIntent() {
     Intent pickImageIntent = new Intent(Intent.ACTION_GET_CONTENT);
     pickImageIntent.setType("image/*");
 
@@ -547,6 +547,7 @@ public class ImagePickerDelegate
   }
 
   private void handleImageResult(String path, boolean shouldDeleteOriginalIfScaled) {
+    Log.d("arash", "handling the result");
     if (methodCall != null) {
       Double maxWidth = methodCall.argument("maxWidth");
       Double maxHeight = methodCall.argument("maxHeight");
