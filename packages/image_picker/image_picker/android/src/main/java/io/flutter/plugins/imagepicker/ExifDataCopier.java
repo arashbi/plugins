@@ -51,6 +51,7 @@ class ExifDataCopier {
 
   private static void setIfNotNull(ExifInterface oldExif, ExifInterface newExif, String property) {
     if (oldExif.getAttribute(property) != null) {
+      Log.e("Exif ", "copying " + attribute + " value " + oldExif.getAttribute(property));
       newExif.setAttribute(property, oldExif.getAttribute(property));
     }
   }
